@@ -43,3 +43,8 @@ h2 {
   font-size: 12px;
   font-style: italic;
 }
+
+.today {
+ width: max-content;
+ margin: auto;
+}
