@@ -49,15 +49,15 @@ function Home({
     .then(resp => resp.json())
     .then(data => {
       if (todayPercent >= 100) {
-        setCongratulate(<p>WHAT A BEAST</p>)
+        setCongratulate(<p className="grats spun">WHAT A BEAST</p>)
       } else if (todayPercent >= 85) {
-        setCongratulate(<p>Almost Got It</p>)
+        setCongratulate(<p className="grats">Almost Got It</p>)
       } else if (todayPercent >= 70) {
-        setCongratulate(<p>Maybe next time...</p>)
+        setCongratulate(<p className="grats">Just a little more effort</p>)
       } else if (todayPercent >= 50) {
-        setCongratulate(<p>come on, dude...</p>)
+        setCongratulate(<p className="grats">come on, dude...</p>)
       } else {
-        setCongratulate(<p>Stop wasting my time, bro.</p>)
+        setCongratulate(<p className="grats">Be. Better.</p>)
       };
       const edittedReviewList = reviewList.map(e => {
         if (e.id === data.id) {
@@ -73,15 +73,15 @@ function Home({
 
   return(
   <div className="today">
-    <p>How are things looking for {todayDate}?</p>
+    <h3 className="headline">How are things looking for {todayDate}?</h3>
     <div className="progress home">
       <div className="counter home" style={{height: (todayPercent >= 15) ? todayPercent + "%" : "15%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
         Total Points: <span style={{
         webkitTextStroke: (todayPercent === 100 ? ".5px aqua" : "none"), fontWeight: "bold"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
     </div>
   </div> 
-    <button onClick={handlePost}>Post Today's Points</button>
-    <div>
+    <div className="destroyer">
+      <button onClick={handlePost}>Post Today's Points</button>
       {congratulate}
     </div>
   </div>

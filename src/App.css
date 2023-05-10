@@ -262,9 +262,34 @@ label {
   column-gap: 10px;
 }
 
+form {
+  font-size: 0.9em;
+}
+
 form > .buttons {
   margin: 6px;
   display: flex;
   column-gap: 30px;
   justify-content: flex-end;
+}
+
+.destroyer {
+  text-align: center;
+  width: 330px;
+  margin: auto;
+}
+
+.grats {
+  font-size: 18px;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 2px;
+  background-color: rgb(78, 14, 14);
+  border-radius: 3px;
+  color: white;
+}
+
+.spun {
+  transform: rotate(-10deg);
+  font-size: 22px;
 }

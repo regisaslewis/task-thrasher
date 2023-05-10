@@ -15,7 +15,7 @@ function Points({ taskList, todayPercent, changePercent }) {
       {tasks}
     </div>
     <div className="progress">
-      <div className="counter" style={{width: (todayPercent >= 15) ? todayPercent + "%" : "15%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
+      <div className="counter" style={{width: (todayPercent >= 15) ? todayPercent + "%" : "15%", fontSize: (todayPercent >= 45) ? .3 * todayPercent + "px" : "15px"}}>
         Total Points: <span style={{
   webkitTextStroke: (todayPercent === 100 ? ".5px aqua" : "none"), fontWeight: "bold"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
       </div>

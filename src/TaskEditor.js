@@ -67,7 +67,7 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
   
   return (
     <div>
-      <h3 className="headline">{taskItem.name} Task Edit Form</h3>
+      <h3 className="headline">|| {taskItem.name} || Edit Form</h3>
       <form onSubmit={handleSubmit}>
         <div className="input-editor">
           <label>Name:</label>
@@ -86,10 +86,13 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
           <input type="text" name="taskPoints" value={editTaskPoints} onChange={handlePointsEdit} />
         </div>
         <div className="buttons">
-          <button type="submt">Transmogrify!</button>
+          <button type="submt">EDIT the BROKEN</button>
         </div>
       </form>
-      <button onClick={destroyTask}>DESTROY the USELESS</button>
+      <div className="destroyer">
+        <h3 className="headline">Or Else...</h3>
+        <button  onClick={destroyTask}>DESTROY the USELESS</button>
+      </div>
     </div>
   )
 }
