@@ -6,7 +6,7 @@ function NavBar() {
     <>
       <div className="title">
         <h1>The Task Thrasher</h1>
-        <h2 className="squash">self-motivation <span className="lil">through</span> data management</h2>
+        <h2 className="squash">get things done <span className="lil">with</span> big, meaty clicks</h2>
       </div>
         <div className="button-lineup">
           <NavLink to="/" exact>
