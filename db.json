@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "School Work",
+      "image": "https://www.nicepng.com/png/detail/117-1176503_font-homework-comments-homework-icon-png.png",
+      "time": "1 hour",
+      "points": 10
+    },
+    {
+      "id": 2,
+      "name": "Exercise",
+      "image": "https://i.pinimg.com/736x/57/f9/0f/57f90fb40b3b1872e45f42cb053f2a96.jpg",
+      "time": "30 minutes",
+      "points": 10
+    }
+  ]
+}

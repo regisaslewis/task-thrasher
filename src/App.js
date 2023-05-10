@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import './App.css';
 import NavBar from "./NavBar";
@@ -10,6 +10,13 @@ import Tasks from "./Tasks"
 function App() {
   
   const [todayPercent, setTodayPercent] = useState(0);
+  const [taskList, setTaskList] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:3001/tasks`)
+      .then(resp => resp.json())
+      .then(data => setTaskList(data))
+  }, [])
 
   function increasePercent() {
     if (todayPercent < 100) {
@@ -25,7 +32,7 @@ function App() {
           <Home todayPercent={todayPercent} increasePercent={increasePercent}/>
         </Route>
         <Route path="/points">
-          <Points />
+          <Points taskList={taskList} />
         </Route>
         <Route path="/review">
           <Review />
