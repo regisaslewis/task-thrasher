@@ -1,15 +1,22 @@
-import React from "react"
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-function IndividualTask({ item }) {
+function IndividualTask({ item, getId }) {
 
-  const { name, image, points, time} = item;
+  const { id, name, image, points, time} = item;
+
+  function handleClick() {
+    getId(id)
+  }
 
   return (
-    <div className="task-item task-grid-task">
-      <img className="small-image" alt={name} src={image} />
-      <p className="task-name">{name} ({time})</p>
-      <p className="task-points">Point Value: { points}</p>
-    </div>
+    <NavLink to={`/tasks/${id}`}>
+      <div className="task-item task-grid-task" onClick={handleClick}>
+        <img className="small-image" alt={name} src={image} />
+        <p className="task-name">{name} ({time})</p>
+        <p className="task-points">Point Value: { points}</p>
+      </div>
+    </NavLink>
   )
 }
 

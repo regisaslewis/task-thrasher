@@ -148,6 +148,10 @@ img {
   align-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .task-name {
   grid-area: tn;
   margin-bottom: -5px;

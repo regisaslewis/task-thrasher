@@ -5,12 +5,14 @@ import NavBar from "./NavBar";
 import Home from "./Home";
 import Points from "./Points";
 import Review from "./Review";
-import Tasks from "./Tasks"
+import Tasks from "./Tasks";
+import TaskEditor from "./TaskEditor";
 
 function App() {
   
   const [todayPercent, setTodayPercent] = useState(0);
   const [taskList, setTaskList] = useState([]);
+  const [taskId, setTaskId] = useState(1)
   const [reviewList, setReviewList] = useState([]);
 
   useEffect(() => {
@@ -56,8 +58,11 @@ function App() {
         <Route path="/review">
           <Review reviewList={reviewList} />
         </Route>
-        <Route path="/tasks">
-          <Tasks taskList={taskList} />
+        <Route exact path="/tasks">
+          <Tasks getId={setTaskId} taskList={taskList} />
+        </Route>
+        <Route exact path={`/tasks/${taskId}`}>
+          <TaskEditor />
         </Route>
       </Switch>
     </div>
