@@ -13,6 +13,20 @@
       "image": "https://i.pinimg.com/736x/57/f9/0f/57f90fb40b3b1872e45f42cb053f2a96.jpg",
       "time": "30 minutes",
       "points": 10
+    },
+    {
+      "id": 3,
+      "name": "House Work",
+      "image": "https://www.nicepng.com/png/detail/959-9594423_haushalt-housekeeping-icon.png",
+      "time": "30 minutes",
+      "points": 5
+    },
+    {
+      "id": 4,
+      "name": "Work",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYDkaJTcMlCxRv8WgRI1RtXXQKFWwUWX1Neg&usqp=CAU",
+      "time": "1 hour",
+      "points": 10
     }
   ]
 }

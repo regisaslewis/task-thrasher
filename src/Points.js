@@ -1,10 +1,15 @@
 import React from "react";
+import Task from "./Task";
 
-function Points() {
+function Points({ taskList }) {
+  const tasks = taskList.map(e => <Task key={e.id} item={e} />)
   return (
-    <div>
+    <>
       <h3>Points Component</h3>
-    </div>
+      <div className="task-list">
+        {tasks}
+      </div>
+    </>
   )
 }
 

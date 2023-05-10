@@ -62,3 +62,36 @@ h2 {
   width: 90px;
   margin: auto;
 }
+
+.task-list { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.task-item {
+  border: solid 3px black;
+  margin: 5px 5px;
+  padding: auto 10px;
+  background-color: black;
+  color: antiquewhite;
+  border-radius: 5px;
+}
+
+.task-item:hover {
+  background-color: rgb(52, 64, 156);
+  box-shadow: 4px 3px 2px black;
+}
+
+.task-item:active {
+  background-color: rgb(117, 122, 161);
+  color: black;
+  border: solid 3px rgb(40, 52, 4);
+}
+
+img {
+  width: 45px;
+}
