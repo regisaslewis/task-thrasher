@@ -16,6 +16,7 @@ function App() {
     fetch(`http://localhost:3001/tasks`)
       .then(resp => resp.json())
       .then(data => setTaskList(data))
+      .catch(error => console.log(error.message))
   }, [])
 
   function increasePercent() {
