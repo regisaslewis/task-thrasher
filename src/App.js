@@ -11,11 +11,19 @@ function App() {
   
   const [todayPercent, setTodayPercent] = useState(0);
   const [taskList, setTaskList] = useState([]);
+  const [reviewList, setReviewList] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:3001/tasks`)
       .then(resp => resp.json())
       .then(data => setTaskList(data))
+      .catch(error => console.log(error.message))
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:3001/days`)
+      .then(resp => resp.json())
+      .then(data => setReviewList(data))
       .catch(error => console.log(error.message))
   }, [])
 
@@ -46,7 +54,7 @@ function App() {
           />
         </Route>
         <Route path="/review">
-          <Review />
+          <Review reviewList={reviewList} />
         </Route>
         <Route path="/tasks">
           <Tasks />
