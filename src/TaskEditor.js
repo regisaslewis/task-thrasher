@@ -1,14 +1,14 @@
 import React from "react"
 import { useRouteMatch } from "react-router-dom";
 
-function TaskEditor() {
+function TaskEditor({ taskId, taskItem }) {
 
   const match = useRouteMatch();
+  console.log(taskItem)
   
   return (
     <div>
-      <p>Please Help</p>
-      <p>Url: {match.url}</p>
+      <p>{taskItem.name}</p>
     </div>
   )
 }

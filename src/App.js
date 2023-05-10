@@ -12,7 +12,8 @@ function App() {
   
   const [todayPercent, setTodayPercent] = useState(0);
   const [taskList, setTaskList] = useState([]);
-  const [taskId, setTaskId] = useState(1)
+  const [taskId, setTaskId] = useState(1);
+  const [taskItem, setTaskItem] = useState({})
   const [reviewList, setReviewList] = useState([]);
 
   useEffect(() => {
@@ -59,10 +60,10 @@ function App() {
           <Review reviewList={reviewList} />
         </Route>
         <Route exact path="/tasks">
-          <Tasks getId={setTaskId} taskList={taskList} />
+          <Tasks getItem={setTaskItem} getId={setTaskId} taskList={taskList} />
         </Route>
         <Route exact path={`/tasks/${taskId}`}>
-          <TaskEditor />
+          <TaskEditor taskId={taskId} taskItem={taskItem} />
         </Route>
       </Switch>
     </div>

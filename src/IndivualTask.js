@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function IndividualTask({ item, getId }) {
+function IndividualTask({ item, getId, getItem }) {
 
   const { id, name, image, points, time} = item;
 
   function handleClick() {
-    getId(id)
+    getId(id);
+    getItem(item);
   }
 
   return (
