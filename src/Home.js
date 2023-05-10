@@ -10,7 +10,7 @@ function Home({ todayPercent, increasePercent }) {
   return(
   <div className="today">
     <p>
-      Percent complete for {month}/{day}/{year}: {todayPercent}%
+      Percent complete for {month}/{day}/{year}: {todayPercent <= 100 ? todayPercent : 100}%
     </p>
     <button onClick={increasePercent}>Increase today's percent</button>
   </div>

@@ -25,6 +25,12 @@ function App() {
     };
   }
 
+  function changePercent(amount) {
+    if (todayPercent < 100) {
+      setTodayPercent(todayPercent + amount)
+    }
+  }
+
   return (
     <div>
       <NavBar todayPercent={todayPercent} setTodayPercent={setTodayPercent} />
@@ -33,7 +39,11 @@ function App() {
           <Home todayPercent={todayPercent} increasePercent={increasePercent}/>
         </Route>
         <Route path="/points">
-          <Points taskList={taskList} />
+          <Points 
+            taskList={taskList} 
+            todayPercent={todayPercent}
+            changePercent={changePercent}
+          />
         </Route>
         <Route path="/review">
           <Review />
