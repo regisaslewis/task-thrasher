@@ -48,3 +48,17 @@ h2 {
  width: max-content;
  margin: auto;
 }
+
+.button-lineup {
+  width: 90%;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 90px 90px 90px 90px;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.nav-button {
+  width: 90px;
+  margin: auto;
+}
