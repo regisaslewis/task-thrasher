@@ -10,9 +10,9 @@ function Task({ item, changePercent }) {
   return (
     <div onClick={handleClick} className="task-item">
       <h3>{name}</h3>
-      <img alt={name} src={image} />
-      <p>Percent: {points}</p>
       <p>{time}</p>
+      <img alt={name} src={image} />
+      <p>Percentage Points: {points}</p>
     </div>
   )
 }
