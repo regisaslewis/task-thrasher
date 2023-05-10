@@ -1,6 +1,6 @@
 import React from "react";
 
-function Task({ item, changePercent }) {
+function TaskButton({ item, changePercent }) {
 
   const { name, image, points, time} = item;
 
@@ -17,4 +17,4 @@ function Task({ item, changePercent }) {
   )
 }
 
-export default Task;
+export default TaskButton;

@@ -112,12 +112,49 @@ p {
   border: solid 3px rgb(40, 52, 4);
 }
 
+.task-item:hover > img {
+  opacity: .3;
+}
+
 img {
   width: 45px;
   height: 45px;
   border-radius: 4px;
 }
 
-.task-item:hover > img {
-  opacity: .3;
+.small-image {
+  border-radius: 2px;
+  margin: 6px auto;
+  grid-area: si;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+
+.task-grid-task {
+  display: grid;
+  grid-template-areas: 
+    "si tn tn"
+    "si tp tp";
+  min-width: 250px;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.task-name {
+  grid-area: tn;
+  margin-bottom: -5px;
+  text-align: right;
+}
+
+.task-points {
+  grid-area: tp;
+  text-align: right;
 }

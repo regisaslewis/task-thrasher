@@ -57,7 +57,7 @@ function App() {
           <Review reviewList={reviewList} />
         </Route>
         <Route path="/tasks">
-          <Tasks />
+          <Tasks taskList={taskList} />
         </Route>
       </Switch>
     </div>

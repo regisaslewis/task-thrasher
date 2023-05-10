@@ -1,9 +1,9 @@
 import React from "react";
-import Task from "./Task";
+import TaskButton from "./TaskButton";
 
 function Points({ taskList, todayPercent, changePercent }) {
 
-  const tasks = taskList.map(e => <Task 
+  const tasks = taskList.map(e => <TaskButton 
     key={e.id} 
     item={e}
     changePercent={changePercent}
