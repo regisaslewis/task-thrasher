@@ -1,5 +1,6 @@
 body {
   background-color: rgb(251, 251, 223);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .title {
@@ -12,7 +13,6 @@ body {
 }
 
 h1 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(242, 170, 125);
   background-color: rgb(3, 120, 120);
   border-radius: 6px;
@@ -54,6 +54,51 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.counter {
+  height: 40px;
+  font-variant: small-caps;
+  background-color: rgb(3, 120, 120);
+  color: rgb(242, 170, 125);
+  text-align: end;
+  text-decoration: underline;
+  padding: auto 20px auto 6px;
+}
+
+.counter.home {
+  border-radius: 0 5px 0 0;
+}
+
+.progress {
+  display: flex;
+  justify-content: flex-start;
+  width: 550px;
+  margin: 0 auto 20px auto;
+  text-align: left;
+  border-bottom: solid 4px black;
+  border-right: solid 4px black;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.548);
+  border-radius: 0 5px 5px 0;
+}
+
+.home {
+  width: 300px;
+  height: 500px;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  text-align: center;
+  border-radius: none;
+}
+
+.enhanced {
+  font-size: 1.8rem;
+  background-color: rgba(143, 23, 63, 0.671);
+  color: rgb(0, 255, 200);
+  width: 120%;
+  margin-left: -10px;
+  border-radius: 2px;
+  transform: rotate(-4deg);
+}
+
 .squash {
   text-align: right;
   margin-bottom: 2px;
@@ -90,14 +135,14 @@ button {
 
 button:hover {
   box-shadow: 2px 2px 3px black;
-  transform: scale(.9);
+  transform: scale(1.1);
 }
 
 button:active {
   background-color:rgb(242, 170, 125);
   color: black;
   box-shadow: 3px 3px 4px black;
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .nav-button {
@@ -125,16 +170,17 @@ button:active {
 }
 
 .task-item:hover {
+  cursor: pointer;
   background-color: rgb(3, 120, 120);
   box-shadow: 4px 3px 2px black;
-  transform: scale(.9);
+  transform: scale(1.1);
 }
 
 .task-item:active {
   background-color: rgb(242, 170, 125);
   color: black;
   border: solid 3px rgb(40, 52, 4);
-  transform: scale(1.1);
+  transform: scale(.9);
 }
 
 .task-item:hover > img {

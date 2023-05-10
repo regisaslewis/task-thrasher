@@ -50,7 +50,7 @@ function App() {
   }, [reviewList, todayDate])
 
   function changePercent(amount) {
-    if (todayPercent < 100) {
+    if (todayPercent + amount < 100) {
       setTodayPercent(todayPercent + amount)
     } else {
       setTodayPercent(100);

@@ -73,9 +73,13 @@ function Home({
 
   return(
   <div className="today">
-    <p>
-      Points for today, {todayDate}: {todayPercent}/100
-    </p>
+    <p>How are things looking for {todayDate}?</p>
+    <div className="progress home">
+      <div className="counter home" style={{height: (todayPercent >= 15) ? todayPercent + "%" : "15%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
+        Total Points: <span style={{
+        webkitTextStroke: (todayPercent === 100 ? ".5px aqua" : "none"), fontWeight: "bold"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
+    </div>
+  </div> 
     <button onClick={handlePost}>Post Today's Points</button>
     <div>
       {congratulate}
