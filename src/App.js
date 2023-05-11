@@ -60,7 +60,7 @@ function App() {
           <Review reviewList={reviewList} />
         </Route>
         <Route exact path="/tasks">
-          <Tasks getItem={setTaskItem} getId={setTaskId} taskList={taskList} />
+          <Tasks getItem={setTaskItem} getId={setTaskId} taskList={taskList} setTaskList={setTaskList} />
         </Route>
         <Route exact path={`/tasks/${taskId}`}>
           <TaskEditor taskId={taskId} taskItem={taskItem} />

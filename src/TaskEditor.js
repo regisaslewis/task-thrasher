@@ -1,10 +1,6 @@
-import React from "react"
-import { useRouteMatch } from "react-router-dom";
+import React from "react";
 
 function TaskEditor({ taskId, taskItem }) {
-
-  const match = useRouteMatch();
-  console.log(taskItem)
   
   return (
     <div>
