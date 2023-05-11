@@ -38,14 +38,16 @@ function App() {
   }, [])
 
   useEffect(() => {
-    fetch(`http://localhost:3001/days/${reviewList.length}`)
-      .then(resp => resp.json())
-      .then(data => {
-        if (data.date === todayDate) {
-        setTodayPercent(data.totalPoints);
-        }
-      })
-  }, [reviewList])
+    if (reviewList.length > 0) {
+      fetch(`http://localhost:3001/days/${reviewList.length}`)
+        .then(resp => resp.json())
+        .then(data => {
+          if (data.date === todayDate) {
+          setTodayPercent(data.totalPoints);
+          }
+        })
+    }
+  }, [reviewList, todayDate])
 
   function changePercent(amount) {
     if (todayPercent < 100) {
@@ -59,7 +61,7 @@ function App() {
     const reducedList = taskList.filter(e => e.id !== id);
     setTaskList(reducedList);
   }
-
+ 
   return (
     <div>
       <NavBar todayPercent={todayPercent} setTodayPercent={setTodayPercent} />

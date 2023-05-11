@@ -10,11 +10,11 @@ function Points({ taskList, todayPercent, changePercent }) {
   />)
   return (
     <>
-      <h3 className="headline">Did something? THRASH IT!</h3>
-      <div className="task-list">
-        {tasks}
-      </div>
-      <h4>Total: {todayPercent}%</h4>
+    <h4>Total Points: {todayPercent}</h4>
+    <h3 className="headline">Did something? THRASH IT!</h3>
+    <div className="task-list">
+      {tasks}
+    </div>
     </>
   )
 }

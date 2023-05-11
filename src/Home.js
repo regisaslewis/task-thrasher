@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-function Home({ todayPercent, setTodayPercent, reviewList, setReviewList, todayDate }) {
+function Home({ 
+  todayPercent,
+  reviewList, 
+  setReviewList, 
+  todayDate,
+}) {
 
   const [congratulate, setCongratulate] = useState(null);
 
@@ -18,7 +23,7 @@ function Home({ todayPercent, setTodayPercent, reviewList, setReviewList, todayD
       })
       .then(resp => resp.json())
       .then(data => {
-        if (todayPercent === 100) {
+        if (todayPercent >= 100) {
           setCongratulate(<p>WHAT A BEAST</p>)
         } else if (todayPercent >= 85) {
           setCongratulate(<p>Almost Got It</p>)
@@ -69,7 +74,7 @@ function Home({ todayPercent, setTodayPercent, reviewList, setReviewList, todayD
   return(
   <div className="today">
     <p>
-      Points for today, {todayDate}: {todayPercent <= 100 ? todayPercent : 100}/100
+      Points for today, {todayDate}: {todayPercent}/100
     </p>
     <button onClick={handlePost}>Post Today's Points</button>
     <div>

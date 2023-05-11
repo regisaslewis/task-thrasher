@@ -67,27 +67,29 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
   
   return (
     <div>
-      <h3 className="headline">{taskItem.name} edit form</h3>
+      <h3 className="headline">{taskItem.name} Task Edit Form</h3>
       <form onSubmit={handleSubmit}>
         <div className="input-editor">
-          <label for="taskName">Name:</label>
+          <label>Name:</label>
           <input type="text" name="taskName" value={editTaskName} onChange={handleNameEdit} />
         </div>
         <div className="input-editor">
-          <label for="taskImage">Image:</label>
+          <label>Image:</label>
           <input type="text" name="taskImage" value={editTaskImage} onChange={handleImageEdit} />
         </div>
         <div className="input-editor">
-          <label for="taskTime">Time per Segment:</label>
+          <label>Time per Segment:</label>
           <input type="text" name="taskTime" value={editTaskTime} onChange={handleTimeEdit} />
         </div>
         <div className="input-editor">
-          <label for="taskPoints">Points per Segment:</label>
+          <label>Points per Segment:</label>
           <input type="text" name="taskPoints" value={editTaskPoints} onChange={handlePointsEdit} />
         </div>
-        <button type="submt">Transmogrify!</button>
+        <div className="buttons">
+          <button type="submt">Transmogrify!</button>
+        </div>
       </form>
-      <button onClick={destroyTask}>DESTROY TASK</button>
+      <button onClick={destroyTask}>DESTROY the USELESS</button>
     </div>
   )
 }

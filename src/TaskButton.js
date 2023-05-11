@@ -12,7 +12,7 @@ function TaskButton({ item, changePercent }) {
       <h3>{name}</h3>
       <p>{time}</p>
       <img alt={name} src={image} />
-      <p>Percentage Points: {points}</p>
+      <p>Point Value: {points}</p>
     </div>
   )
 }

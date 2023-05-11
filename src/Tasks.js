@@ -27,7 +27,8 @@ function Tasks({ taskList, setTaskList, getId, getItem }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:3001/tasks`, {
+    if (newTaskName && newTaskImage && newTaskTime && newTaskPoints) {
+      fetch(`http://localhost:3001/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -48,11 +49,13 @@ function Tasks({ taskList, setTaskList, getId, getItem }) {
         setNewTaskTime("");
         setNewTaskPoints("");
       })
+    }
+    
   }
 
   return (
     <div>
-      <h3 className="headline">SPAWN a New Task!</h3>
+      <h3 className="headline">CREATE the NEW</h3>
       <div>
         <form onSubmit={handleSubmit}>
           <div className="input-tasks">
@@ -71,10 +74,12 @@ function Tasks({ taskList, setTaskList, getId, getItem }) {
             <label>Points:</label>
             <input type="text" placeholder="Points per segment..." value={newTaskPoints} onChange={handlePointsChange} />
           </div>
-          <button type="submt">SEND FORTH!</button>
+          <div className="buttons">
+            <button type="submt">SPAWN!</button>
+          </div>
         </form>
       </div>
-      <h3 className="headline">EDIT the old!</h3>
+      <h3 className="headline">ALTER the OLD</h3>
       <div className="task-grid">
         {editTaskList}
       </div>

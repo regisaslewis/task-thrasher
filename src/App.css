@@ -78,6 +78,28 @@ p {
   text-align: center;
 }
 
+button {
+  border: none;
+  background-color: rgb(35, 65, 63);
+  font-size: 20px;
+  color: white;
+  min-height: 35px;
+  border-radius: 3px;
+  transition: transform 200ms ease-in-out;
+}
+
+button:hover {
+  box-shadow: 2px 2px 3px black;
+  transform: scale(.9);
+}
+
+button:active {
+  background-color:rgb(242, 170, 125);
+  color: black;
+  box-shadow: 3px 3px 4px black;
+  transform: scale(1.1);
+}
+
 .nav-button {
   width: 90px;
   margin: auto;
@@ -99,21 +121,28 @@ p {
   background-color: black;
   color: antiquewhite;
   border-radius: 5px;
+  transition: transform 50ms ease-in-out;
 }
 
 .task-item:hover {
   background-color: rgb(3, 120, 120);
   box-shadow: 4px 3px 2px black;
+  transform: scale(.9);
 }
 
 .task-item:active {
   background-color: rgb(242, 170, 125);
   color: black;
   border: solid 3px rgb(40, 52, 4);
+  transform: scale(1.1);
 }
 
 .task-item:hover > img {
   opacity: .3;
+}
+
+.task-item:active > img {
+  opacity: 1;
 }
 
 img {
@@ -187,6 +216,9 @@ label {
   column-gap: 10px;
 }
 
-form > button {
-  margin: 10px auto auto 60%;
+form > .buttons {
+  margin: 6px;
+  display: flex;
+  column-gap: 30px;
+  justify-content: flex-end;
 }
