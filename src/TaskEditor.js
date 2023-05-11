@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
 
-function TaskEditor({ taskId, taskItem, taskList, setTaskList }) {
+function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
 
   const history = useHistory();
 
@@ -53,17 +53,41 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList }) {
         history.push(`/tasks`);
       })
   }
+
+  function destroyTask() {
+    fetch(`http://localhost:3001/tasks/${taskId}`, {
+      method: "DELETE"
+    })
+      .then(resp => resp.json())
+      .then(() => {
+        handleDelete(taskId);
+        history.push(`/tasks`);
+      });
+  }
   
   return (
     <div>
-      <p>{taskItem.name}</p>
+      <h3 className="headline">{taskItem.name} edit form</h3>
       <form onSubmit={handleSubmit}>
-          <input type="text" value={editTaskName} onChange={handleNameEdit} />
-          <input type="text" value={editTaskImage} onChange={handleImageEdit} />
-          <input type="text" value={editTaskTime} onChange={handleTimeEdit} />
-          <input type="text" value={editTaskPoints} onChange={handlePointsEdit} />
-          <button type="submt">Transmogrify!</button>
-        </form>
+        <div className="input-editor">
+          <label for="taskName">Name:</label>
+          <input type="text" name="taskName" value={editTaskName} onChange={handleNameEdit} />
+        </div>
+        <div className="input-editor">
+          <label for="taskImage">Image:</label>
+          <input type="text" name="taskImage" value={editTaskImage} onChange={handleImageEdit} />
+        </div>
+        <div className="input-editor">
+          <label for="taskTime">Time per Segment:</label>
+          <input type="text" name="taskTime" value={editTaskTime} onChange={handleTimeEdit} />
+        </div>
+        <div className="input-editor">
+          <label for="taskPoints">Points per Segment:</label>
+          <input type="text" name="taskPoints" value={editTaskPoints} onChange={handlePointsEdit} />
+        </div>
+        <button type="submt">Transmogrify!</button>
+      </form>
+      <button onClick={destroyTask}>DESTROY TASK</button>
     </div>
   )
 }

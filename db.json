@@ -30,10 +30,17 @@
     },
     {
       "name": "Jogging",
-      "image": "https://media.istockphoto.com/id/1158723576/vector/running-man-icon-sign-flat.jpg?s=612x612&w=0&k=20&c=Nfj6k5NvsAdx9nS5JeqrK_tkpVvJ1pDHZfe7mqSvMOU=",
+      "image": "https://www.nicepng.com/png/detail/43-437899_computer-icons-running-icon-design-jogging-symbol-running.png",
       "time": "30 minutes",
       "points": "10",
       "id": 5
+    },
+    {
+      "name": "Cooking",
+      "image": "https://cdn-icons-png.flaticon.com/512/2829/2829856.png",
+      "time": "30 minutes",
+      "points": "10",
+      "id": 6
     }
   ],
   "days": [

@@ -55,10 +55,22 @@ function Tasks({ taskList, setTaskList, getId, getItem }) {
       <h3 className="headline">SPAWN a New Task!</h3>
       <div>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Task Name..." value={newTaskName} onChange={handleNameChange} />
-          <input type="text" placeholder="Thumbnail URL..." value={newTaskImage} onChange={handleImageChange} />
-          <input type="text" placeholder="Time per segment..." value={newTaskTime} onChange={handleTimeChange} />
-          <input type="text" placeholder="Points per segment..." value={newTaskPoints} onChange={handlePointsChange} />
+          <div className="input-tasks">
+            <label>Name:</label>
+            <input type="text" placeholder="Task Name..." value={newTaskName} onChange={handleNameChange} />
+          </div>
+          <div className="input-tasks">
+            <label>Image:</label>
+            <input type="text" placeholder="Thumbnail URL..." value={newTaskImage} onChange={handleImageChange} />
+          </div>
+          <div className="input-tasks">
+            <label>Time:</label>
+            <input type="text" placeholder="Time per segment..." value={newTaskTime} onChange={handleTimeChange} />
+          </div>
+          <div className="input-tasks">
+            <label>Points:</label>
+            <input type="text" placeholder="Points per segment..." value={newTaskPoints} onChange={handlePointsChange} />
+          </div>
           <button type="submt">SEND FORTH!</button>
         </form>
       </div>

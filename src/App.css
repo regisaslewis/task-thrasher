@@ -118,6 +118,7 @@ p {
 
 img {
   width: 45px;
+  background-color: white;
   height: 45px;
   border-radius: 4px;
 }
@@ -161,4 +162,31 @@ a {
 .task-points {
   grid-area: tp;
   text-align: right;
+}
+
+form {
+  width: 380px;
+  margin: 15px auto;
+  border: solid 2px black;
+  padding: 5px;
+}
+
+.input-editor {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  column-gap: 7px;
+}
+
+label {
+  text-align: right;
+}
+
+.input-tasks {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  column-gap: 10px;
+}
+
+form > button {
+  margin: 10px auto auto 60%;
 }

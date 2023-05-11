@@ -42,6 +42,11 @@ function App() {
     }
   }
 
+  function handleDelete(id) {
+    const reducedList = taskList.filter(e => e.id !== id);
+    setTaskList(reducedList);
+  }
+
   return (
     <div>
       <NavBar todayPercent={todayPercent} setTodayPercent={setTodayPercent} />
@@ -63,7 +68,13 @@ function App() {
           <Tasks getItem={setTaskItem} getId={setTaskId} taskList={taskList} setTaskList={setTaskList} />
         </Route>
         <Route exact path={`/tasks/${taskId}`}>
-          <TaskEditor taskId={taskId} taskItem={taskItem} taskList={taskList} setTaskList={setTaskList} />
+          <TaskEditor 
+            taskId={taskId} 
+            taskItem={taskItem} 
+            taskList={taskList} 
+            setTaskList={setTaskList}
+            handleDelete={handleDelete}
+          />
         </Route>
       </Switch>
     </div>
