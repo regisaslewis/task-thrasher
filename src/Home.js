@@ -75,7 +75,7 @@ function Home({
   <div className="today">
     <h3 className="headline">How are things looking for {todayDate}?</h3>
     <div className="progress home">
-      <div className="counter home" style={{height: (todayPercent >= 15) ? todayPercent + "%" : "15%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
+      <div className="counter home" style={{height: (todayPercent >= 5) ? todayPercent + "%" : "5%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
         Total Points: <span style={{
         webkitTextStroke: (todayPercent === 100 ? ".5px aqua" : "none"), fontWeight: "bold"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
     </div>
