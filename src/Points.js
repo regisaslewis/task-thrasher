@@ -14,7 +14,7 @@ function Points({ taskList, todayPercent, changePercent }) {
       <div className="task-list">
         {tasks}
       </div>
-      <h4>Total: {todayPercent <= 100 ? todayPercent : 100}%</h4>
+      <h4>Total: {todayPercent}%</h4>
     </>
   )
 }

@@ -16,6 +16,13 @@ function App() {
   const [taskItem, setTaskItem] = useState({})
   const [reviewList, setReviewList] = useState([]);
 
+  const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  
+  const todayDate = `${month.toString().length === 1 ? "0" + month : month}/${day.toString().length === 1 ? "0" + day : day }/${year}`
+
   useEffect(() => {
     fetch(`http://localhost:3001/tasks`)
       .then(resp => resp.json())
@@ -30,15 +37,21 @@ function App() {
       .catch(error => console.log(error.message))
   }, [])
 
-  function increasePercent() {
-    if (todayPercent < 100) {
-      setTodayPercent(todayPercent + 10)
-    };
-  }
+  useEffect(() => {
+    fetch(`http://localhost:3001/days/${reviewList.length}`)
+      .then(resp => resp.json())
+      .then(data => {
+        if (data.date === todayDate) {
+        setTodayPercent(data.totalPoints);
+        }
+      })
+  }, [reviewList])
 
   function changePercent(amount) {
     if (todayPercent < 100) {
       setTodayPercent(todayPercent + amount)
+    } else {
+      setTodayPercent(100);
     }
   }
 
@@ -52,7 +65,13 @@ function App() {
       <NavBar todayPercent={todayPercent} setTodayPercent={setTodayPercent} />
       <Switch>
         <Route exact path="/">
-          <Home todayPercent={todayPercent} increasePercent={increasePercent}/>
+          <Home 
+            todayPercent={todayPercent}
+            setTodayPercent={setTodayPercent} 
+            reviewList={reviewList} 
+            setReviewList={setReviewList}
+            todayDate={todayDate}
+          />
         </Route>
         <Route path="/points">
           <Points 

@@ -15,11 +15,11 @@ function NavBar() {
           <NavLink to="/points" exact>
             <button className="nav-button">Points</button>
           </NavLink>
-          <NavLink to="/review" exact>
-            <button className="nav-button">Review</button>
-          </NavLink>
           <NavLink to="/tasks" exact>
             <button className="nav-button">Tasks</button>
+          </NavLink>
+          <NavLink to="/review" exact>
+            <button className="nav-button">Review</button>
           </NavLink>
         </div>
     </>

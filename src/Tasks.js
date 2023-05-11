@@ -36,7 +36,7 @@ function Tasks({ taskList, setTaskList, getId, getItem }) {
         name: newTaskName,
         image: newTaskImage,
         time: newTaskTime,
-        points: newTaskPoints
+        points: Number(newTaskPoints)
       })
     })
       .then(resp => resp.json())

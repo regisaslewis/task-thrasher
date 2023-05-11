@@ -37,7 +37,7 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
         name: editTaskName,
         image: editTaskImage,
         time: editTaskTime,
-        points: editTaskPoints
+        points: Number(editTaskPoints)
       })
     })
       .then(resp => resp.json())
