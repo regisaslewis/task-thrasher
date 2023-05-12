@@ -55,11 +55,8 @@ p {
 }
 
 .counter {
-  height: 40px;
-  font-variant: small-caps;
-  background-color: rgb(3, 120, 120);
-  color: rgb(242, 170, 125);
-  text-align: end;
+  position: absolute;
+  height: 52px;
   text-decoration: underline;
   padding: auto 20px auto 6px;
 }
@@ -69,24 +66,53 @@ p {
 }
 
 .progress {
-  display: flex;
-  justify-content: flex-start;
+  position: relative;
   width: 550px;
+  height: 52px;
   margin: 0 auto 20px auto;
-  text-align: left;
   border-bottom: solid 4px black;
   border-right: solid 4px black;
-  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.548);
-  border-radius: 0 5px 5px 0;
+  box-shadow: 3px 4px 5px rgba(173, 162, 162, 0.548);
+  border-radius: 5px 5px 0 0;
 }
 
 .home {
   width: 300px;
   height: 500px;
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-end;
-  text-align: center;
-  border-radius: none;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.progress > p {
+  font-variant: small-caps;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.progress.home > p {
+  font-size: 25px;
+  width: fit-content;
+  height: 70%;
+  text-decoration: underline;
+  z-index: 2;
+}
+
+.progress.points > p {
+  font-size: 25px;
+  width: 95%;
+  margin: 3% auto;
+  text-align: right;
+  text-decoration: underline;
+  z-index: 2;
 }
 
 .enhanced {

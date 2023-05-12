@@ -75,10 +75,12 @@ function Home({
   <div className="today">
     <h3 className="headline">How are things looking for {todayDate}?</h3>
     <div className="progress home">
-      <div className="counter home" style={{height: (todayPercent >= 5) ? todayPercent + "%" : "5%", fontSize: (todayPercent >= 30) ? .3 * todayPercent + "px" : "10px"}}>
-        Total Points: <span style={{
-        webkitTextStroke: (todayPercent === 100 ? ".5px aqua" : "none"), fontWeight: "bold"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
+      <p>Total Points: <span style={{
+        fontSize: (todayPercent === 100) ? "30px" : "25px"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
+      </p>
+      <div className="counter home" style={{height: todayPercent + "%", backgroundColor: (todayPercent < 75) ? "rgba(180, 35, 55)" : "rgb(35, 65, 63)"}}>
     </div>
+    
   </div> 
     <div className="destroyer">
       <button onClick={handlePost}>Post Today's Points</button>

@@ -70,6 +70,11 @@
       "date": "05/11/2023",
       "totalPoints": 35,
       "id": 4
+    },
+    {
+      "date": "05/12/2023",
+      "totalPoints": 0,
+      "id": 5
     }
   ]
 }
