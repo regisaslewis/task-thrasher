@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import IndividualTask from "./IndivualTask";
 
-function Tasks({ taskList, setTaskList, getId, getItem }) {
+function Tasks({ 
+  taskList, 
+  setTaskList, 
+  getId, 
+  getItem,
+}) {
 
   const [newTaskName, setNewTaskName] = useState("");
   const [newTaskImage, setNewTaskImage] = useState("");
   const [newTaskTime, setNewTaskTime] = useState("");
   const [newTaskPoints, setNewTaskPoints] = useState("");
+
   const editTaskList = taskList.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
 
   function handleNameChange(e) {

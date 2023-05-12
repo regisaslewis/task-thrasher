@@ -1,7 +1,13 @@
 import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
 
-function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
+function TaskEditor({ 
+  taskId, 
+  taskItem, 
+  taskList, 
+  setTaskList, 
+  handleDelete 
+}) {
 
   const history = useHistory();
 
@@ -90,7 +96,7 @@ function TaskEditor({ taskId, taskItem, taskList, setTaskList, handleDelete }) {
         </div>
       </form>
       <div className="destroyer">
-        <h3 className="headline">Or Else...</h3>
+        <h3 className="headline">Or...</h3>
         <button  onClick={destroyTask}>DESTROY the USELESS</button>
       </div>
     </div>

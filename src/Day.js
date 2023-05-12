@@ -5,7 +5,8 @@ function Days({ item }) {
   const { date, totalPoints} = item;
   return (
     <div>
-      <p>Date: {date} || {totalPoints} points</p>
+      <div>Date: {date.slice(0, 5)}</div> 
+      <div>{totalPoints} points</div>
     </div>
   )
 }

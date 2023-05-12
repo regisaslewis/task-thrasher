@@ -112,16 +112,25 @@ p {
 }
 
 .day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   margin-top: 20px;
 }
 
 .progress.day > p {
-  font-size: 18px;
+  font-size: 20px;
   width: 95%;
   margin: auto;
-  text-align: right;
-  text-decoration: underline;
+  text-align: left;
   z-index: 2;
+}
+
+.day-number {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 15px;
 }
 
 .enhanced {
@@ -318,7 +327,7 @@ form > .buttons {
   font-size: 18px;
   width: fit-content;
   margin: 10px auto;
-  padding: 2px;
+  padding: 2px 10px;
   background-color: rgb(78, 14, 14);
   border-radius: 3px;
   color: white;
@@ -328,12 +337,3 @@ form > .buttons {
   transform: rotate(-10deg);
   font-size: 22px;
 }
-
-/* .day-div {
-  font-size: 22px;
-  width: fit-content;
-  height: 300px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  background-color: blue;;
-} */
