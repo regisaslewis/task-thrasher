@@ -41,6 +41,13 @@
       "time": "1 hour",
       "points": 10,
       "id": 7
+    },
+    {
+      "name": "Wash Car",
+      "image": "https://i.fbcd.co/products/resized/resized-750-500/23-515c220c129481a8bed0d9b34aa9a6b0973563f4f7b99d19b501caa46891f103.jpg",
+      "time": "10 minutes",
+      "points": 5,
+      "id": 8
     }
   ],
   "days": [
@@ -61,7 +68,7 @@
     },
     {
       "date": "05/11/2023",
-      "totalPoints": 0,
+      "totalPoints": 35,
       "id": 4
     }
   ]
