@@ -5,7 +5,7 @@ function Days({ item }) {
   const { date, totalPoints} = item;
   return (
     <div>
-      <p>{date}: {totalPoints}% Complete</p>
+      <p>Date: {date} || {totalPoints} points</p>
     </div>
   )
 }

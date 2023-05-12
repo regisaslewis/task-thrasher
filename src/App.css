@@ -61,10 +61,6 @@ p {
   padding: auto 20px auto 6px;
 }
 
-.counter.home {
-  border-radius: 0 5px 0 0;
-}
-
 .progress {
   position: relative;
   width: 550px;
@@ -110,6 +106,19 @@ p {
   font-size: 25px;
   width: 95%;
   margin: 3% auto;
+  text-align: right;
+  text-decoration: underline;
+  z-index: 2;
+}
+
+.day {
+  margin-top: 20px;
+}
+
+.progress.day > p {
+  font-size: 18px;
+  width: 95%;
+  margin: auto;
   text-align: right;
   text-decoration: underline;
   z-index: 2;
@@ -319,3 +328,12 @@ form > .buttons {
   transform: rotate(-10deg);
   font-size: 22px;
 }
+
+/* .day-div {
+  font-size: 22px;
+  width: fit-content;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: blue;;
+} */
