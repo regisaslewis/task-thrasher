@@ -129,6 +129,7 @@ p {
 }
 
 .day-number {
+  text-align: right;
   position: absolute;
   margin-left: 10%;
   margin-top: 15px;
@@ -337,4 +338,8 @@ form > .buttons {
 .spun {
   transform: rotate(-10deg);
   font-size: 22px;
+}
+
+.underline {
+  text-decoration: underline;
 }

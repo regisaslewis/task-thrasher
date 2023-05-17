@@ -10,16 +10,16 @@ function NavBar() {
       </div>
         <div className="button-lineup">
           <NavLink to="/" exact>
-            <button className="nav-button">Home</button>
+            <button className="nav-button">Update Today</button>
           </NavLink>
           <NavLink to="/points" exact>
-            <button className="nav-button">Points</button>
+            <button className="nav-button">Add Points</button>
           </NavLink>
           <NavLink to="/tasks" exact>
-            <button className="nav-button">Tasks</button>
+            <button className="nav-button">Manage Tasks</button>
           </NavLink>
           <NavLink to="/review" exact>
-            <button className="nav-button">Review</button>
+            <button className="nav-button">View Records</button>
           </NavLink>
         </div>
     </>

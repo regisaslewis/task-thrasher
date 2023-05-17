@@ -73,7 +73,7 @@ function Home({
 
   return(
   <div className="today">
-    <h3 className="headline">Here's how things look for <br /> ||{todayDate}||</h3>
+    <h3 className="headline"><span className="underline">Here's how things look for</span> <br /> ||{todayDate}||</h3>
     <div className="progress home">
       <p>Total Points: <span style={{
         fontSize: (todayPercent === 100) ? "30px" : "25px"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
