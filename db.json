@@ -92,13 +92,18 @@
     },
     {
       "date": "05/17/2023",
-      "totalPoints": 45,
+      "totalPoints": 25,
       "id": 6
     },
     {
       "date": "05/22/2023",
-      "totalPoints": 85,
+      "totalPoints": 1,
       "id": 7
+    },
+    {
+      "date": "05/23/2023",
+      "totalPoints": 85,
+      "id": 8
     }
   ]
 }

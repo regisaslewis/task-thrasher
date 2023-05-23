@@ -61,10 +61,10 @@ function App() {
     const reducedList = taskList.filter(e => e.id !== id);
     setTaskList(reducedList);
   }
- 
+  
   return (
     <div>
-      <NavBar todayPercent={todayPercent} setTodayPercent={setTodayPercent} />
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <Home 
