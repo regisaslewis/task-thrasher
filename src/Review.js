@@ -5,7 +5,7 @@ function Review({ reviewList }) {
   const mostRecentFirst = [...reviewList].reverse();
   
   const days = mostRecentFirst.map(e => 
-    <div>
+    <div className="day-layout">
       <div className="day-number">Day {e.id}</div>
       <div className="progress day">
         <p><Day key={e.id} item={e} /></p>

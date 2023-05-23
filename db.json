@@ -57,7 +57,7 @@
       "id": 9
     },
     {
-      "name": "Car Bathing",
+      "name": "Car Warshing",
       "image": "https://cdn-icons-png.flaticon.com/512/5102/5102795.png",
       "time": "20 minutes",
       "points": 5,
@@ -94,6 +94,11 @@
       "date": "05/17/2023",
       "totalPoints": 45,
       "id": 6
+    },
+    {
+      "date": "05/22/2023",
+      "totalPoints": 85,
+      "id": 7
     }
   ]
 }
