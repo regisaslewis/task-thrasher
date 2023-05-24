@@ -349,3 +349,13 @@ form > .buttons {
 .underline {
   text-decoration: underline;
 }
+
+.name-card {
+  font-size: 12px;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 5px;
+  width:90px;
+  text-align: center;
+  margin: auto;
+}

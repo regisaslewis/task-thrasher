@@ -5,6 +5,7 @@ function Home({
   reviewList, 
   setReviewList, 
   todayDate,
+  barColor
 }) {
 
   const [congratulate, setCongratulate] = useState(null);
@@ -78,7 +79,7 @@ function Home({
       <p>Total Points: <span style={{
         fontSize: (todayPercent === 100) ? "30px" : "25px"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
       </p>
-      <div className="counter home" style={{height: todayPercent + "%", backgroundColor: (todayPercent < 75) ? "rgb(218, 40, 96)" : "rgb(3, 120, 120)"}}>
+      <div className="counter home" style={{height: todayPercent + "%", backgroundColor: barColor()}}>
     </div>
     
   </div> 

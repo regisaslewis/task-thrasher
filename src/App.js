@@ -61,7 +61,17 @@ function App() {
     const reducedList = taskList.filter(e => e.id !== id);
     setTaskList(reducedList);
   }
-  
+
+  function barColor() {
+    if (todayPercent < 75) {
+      return "rgb(218, 40, 96)";
+    } else if (todayPercent < 100) {
+      return "rgb(3, 120, 120)";
+    } else {
+      return "gold";
+    }
+  }
+
   return (
     <div>
       <NavBar />
@@ -73,6 +83,7 @@ function App() {
             reviewList={reviewList} 
             setReviewList={setReviewList}
             todayDate={todayDate}
+            barColor={barColor}
           />
         </Route>
         <Route path="/points">
@@ -80,6 +91,7 @@ function App() {
             taskList={taskList} 
             todayPercent={todayPercent}
             changePercent={changePercent}
+            barColor={barColor}
           />
         </Route>
         <Route path="/review">

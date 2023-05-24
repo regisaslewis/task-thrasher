@@ -9,11 +9,21 @@ function Review({ reviewList }) {
       <div className="day-number">Day {e.id}</div>
       <div className="progress day">
         <p><Day key={e.id} item={e} /></p>
-        <div className="counter " style={{width: e.totalPoints + "%", backgroundColor: (e.totalPoints < 75) ? "rgb(218, 40, 96)" : "rgb(3, 120, 120)"}}>
+        <div className="counter " style={{width: e.totalPoints + "%", backgroundColor: barColor(e)}}>
         </div>
       </div>
     </div>
   )
+
+  function barColor(e) {
+    if (e.totalPoints < 75) {
+      return "rgb(218, 40, 96)";
+    } else if (e.totalPoints < 100) {
+      return "rgb(3, 120, 120)";
+    } else {
+      return "gold";
+    }
+  }
   
   return (
     <>

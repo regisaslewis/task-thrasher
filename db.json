@@ -50,18 +50,18 @@
       "id": 8
     },
     {
-      "name": "Horse Repair",
-      "image": "https://cdn-icons-png.flaticon.com/512/2219/2219032.png",
-      "time": "15 minutes",
-      "points": 5,
-      "id": 9
-    },
-    {
       "name": "Car Warshing",
       "image": "https://cdn-icons-png.flaticon.com/512/5102/5102795.png",
       "time": "20 minutes",
       "points": 5,
       "id": 10
+    },
+    {
+      "name": "Skateboarding",
+      "image": "https://user-images.githubusercontent.com/16400874/70711198-3b84ce00-1ce1-11ea-87e6-53a6261fd808.png",
+      "time": "10 minutes",
+      "points": 2,
+      "id": 12
     }
   ],
   "days": [
@@ -102,7 +102,7 @@
     },
     {
       "date": "05/23/2023",
-      "totalPoints": 85,
+      "totalPoints": 97,
       "id": 8
     }
   ]

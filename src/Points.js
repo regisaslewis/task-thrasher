@@ -1,7 +1,7 @@
 import React from "react";
 import TaskButton from "./TaskButton";
 
-function Points({ taskList, todayPercent, changePercent }) {
+function Points({ taskList, todayPercent, changePercent, barColor }) {
 
   const tasks = taskList.map(e => <TaskButton 
     key={e.id} 
@@ -18,7 +18,7 @@ function Points({ taskList, todayPercent, changePercent }) {
       <p>Points: <span style={{
         fontSize: (todayPercent === 100) ? "30px" : "25px"}}>{todayPercent === 100 ? todayPercent + "!!!" : todayPercent}</span>
       </p>
-      <div className="counter" style={{width: todayPercent + "%", backgroundColor: (todayPercent < 75) ? "rgb(218, 40, 96)" : "rgb(3, 120, 120)"}}>
+      <div className="counter" style={{width: todayPercent + "%", backgroundColor: barColor()}}>
       </div>
     </div> 
     </>
