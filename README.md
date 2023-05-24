@@ -16,4 +16,8 @@ This page is where a user goes to add points for the day.  Each task is given it
 For instance, my Tasks include School Work, which I’ve decided is worth ten points for one hour of focus.  Ten solid hours of doing school work would fill my bar for the day, but it is mostly an unrealistic aim.  The other Tasks allow a robust variety of duties, all with varying values.
 ![Add Points](images/Add%20Points.jpg)
 
-## 
+## Manage Tasks
+Here we have a form to add new Tasks to the user’s collection. Input field’s for the Task’s name, an icon or image representing the Task, the time per segment, and the point value (as a number) assigned to each segment.
+![Manage Tasks](images/Manage%20Tasks.jpg)
+Below sits buttons for each Task.  By clicking a button, the user can UPDATE any of the information related to an already established Task. Or, if the Task is no longer relevant, there is a button below to permanently DELETE the Task from the database.
+![Edit Form](images/Edit%20Form.jpg)
