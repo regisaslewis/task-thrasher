@@ -14,3 +14,6 @@ It is important for any Thrasher to make sure to post the day’s points before 
 ## Add Points
 This page is where a user goes to add points for the day.  Each task is given its own button, describing the task’s name, its time allotment per section, an image or icon representing the task, and the point value of each click.
 For instance, my Tasks include School Work, which I’ve decided is worth ten points for one hour of focus.  Ten solid hours of doing school work would fill my bar for the day, but it is mostly an unrealistic aim.  The other Tasks allow a robust variety of duties, all with varying values.
+![Add Points](images/Add%20Points.jpg)
+
+## 
