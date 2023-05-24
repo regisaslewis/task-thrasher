@@ -128,13 +128,6 @@ p {
   z-index: 2;
 }
 
-/* .day-layout {
-  display: grid;
-  grid-template-columns: 100px auto;
-  width: 60%;
-  margin: auto;
-} */
-
 .day-number {
   text-align: center;
   margin-left: 10%;
