@@ -21,3 +21,9 @@ Here we have a form to add new Tasks to the user’s collection. Input field’s
 ![Manage Tasks](images/Manage%20Tasks.jpg)
 Below sits buttons for each Task.  By clicking a button, the user can UPDATE any of the information related to an already established Task. Or, if the Task is no longer relevant, there is a button below to permanently DELETE the Task from the database.
 ![Edit Form](images/Edit%20Form.jpg)
+
+## View Records
+Finally, for checking one’s progress the View Records page displays all the days in which a user has tracked their work using Task Thrasher.  A column shows each day’s information in descending order (most recent to oldest), displaying the date, the number of points, and a bar representing the percentage completed for the day described.
+![View Records](images/View%20Records.jpg)
+
+With that out of the way, GET THRASHING!
