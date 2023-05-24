@@ -12,7 +12,7 @@ function Home({
 
   function handlePost() {
     if (!(reviewList[reviewList.length - 1].date === todayDate)) {
-      fetch(`http://localhost:3001/days`, {
+      fetch(`https://thrasher.onrender.com/days`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -37,7 +37,7 @@ function Home({
         };
         setReviewList([...reviewList, data])
       })
-    } else {fetch(`http://localhost:3001/days/${reviewList.length}`, {
+    } else {fetch(`https://thrasher.onrender.com/days/${reviewList.length}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"

@@ -24,14 +24,14 @@ function App() {
   const todayDate = `${month.toString().length === 1 ? "0" + month : month}/${day.toString().length === 1 ? "0" + day : day }/${year}`
 
   useEffect(() => {
-    fetch(`http://localhost:3001/tasks`)
+    fetch(`https://thrasher.onrender.com/tasks`)
       .then(resp => resp.json())
       .then(data => setTaskList(data))
       .catch(error => console.log(error.message))
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/days`)
+    fetch(`https://thrasher.onrender.com/days`)
       .then(resp => resp.json())
       .then(data => setReviewList(data))
       .catch(error => console.log(error.message))
@@ -39,7 +39,7 @@ function App() {
 
   useEffect(() => {
     if (reviewList.length > 0) {
-      fetch(`http://localhost:3001/days/${reviewList.length}`)
+      fetch(`https://thrasher.onrender.com/days/${reviewList.length}`)
         .then(resp => resp.json())
         .then(data => {
           if (data.date === todayDate) {

@@ -34,7 +34,7 @@ function TaskEditor({
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:3001/tasks/${taskId}`, {
+    fetch(`https://thrasher.onrender.com/tasks/${taskId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
@@ -61,7 +61,7 @@ function TaskEditor({
   }
 
   function destroyTask() {
-    fetch(`http://localhost:3001/tasks/${taskId}`, {
+    fetch(`https://thrasher.onrender.com/tasks/${taskId}`, {
       method: "DELETE"
     })
       .then(resp => resp.json())
