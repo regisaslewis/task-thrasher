@@ -62,6 +62,13 @@
       "time": "10 minutes",
       "points": 2,
       "id": 12
+    },
+    {
+      "name": "Game of Horseshoes",
+      "image": "https://cdn.icon-icons.com/icons2/2248/PNG/512/horseshoe_icon_137490.png",
+      "time": "10 minutes",
+      "points": 1,
+      "id": 13
     }
   ],
   "days": [
@@ -107,7 +114,7 @@
     },
     {
       "date": "05/24/2023",
-      "totalPoints": 40,
+      "totalPoints": 83,
       "id": 9
     }
   ]
