@@ -34,7 +34,7 @@ function Tasks({
   function handleSubmit(e) {
     e.preventDefault();
     if (newTaskName && newTaskImage && newTaskTime && newTaskPoints) {
-      fetch(`https://thrasher.onrender.com/tasks`, {
+      fetch(`http://localhost:3001/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
