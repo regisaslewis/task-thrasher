@@ -12,8 +12,11 @@ function Tasks({
   const [newTaskImage, setNewTaskImage] = useState("");
   const [newTaskTime, setNewTaskTime] = useState("");
   const [newTaskPoints, setNewTaskPoints] = useState("");
+  const [filterName, setFilterName] = useState("")
 
-  const editTaskList = taskList.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
+  const filteredTasks = taskList.filter(task => task.name.toLowerCase().includes(filterName.toLowerCase()))
+
+  const editTaskList = filteredTasks.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
 
   function handleNameChange(e) {
     setNewTaskName(e.target.value)    
@@ -56,11 +59,18 @@ function Tasks({
         setNewTaskPoints("");
       })
     }
-    
+  }
+
+  function handleFilter(e) {
+    setFilterName(e.target.value)
   }
 
   return (
     <div>
+    <div className="filter">
+      <h3 className="headline">LIMIT the EXCESS</h3>
+      <input className="filter-input" type="text" placeholder="Filter..." value={filterName} onChange={handleFilter}/>
+    </div>
       <h3 className="headline">CREATE the NEW</h3>
       <div>
         <form onSubmit={handleSubmit}>

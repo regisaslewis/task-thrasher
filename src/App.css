@@ -352,3 +352,13 @@ form > .buttons {
   text-align: center;
   margin: auto;
 }
+
+.filter {
+  width: 400px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.filter-input {
+  margin: 10px auto;
+}
