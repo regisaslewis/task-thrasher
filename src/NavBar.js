@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() { 
   return (
-    <>
+    <div>
       <div className="title">
         <h1>The Task Thrasher</h1>
         <h2 className="squash">get things done <span className="lil">with</span> big, meaty clicks</h2>
@@ -23,7 +23,7 @@ function NavBar() {
           <button className="nav-button">View Records</button>
         </NavLink>
       </div>
-    </>
+    </div>
   )
 }
 

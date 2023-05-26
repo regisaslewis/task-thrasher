@@ -15,6 +15,10 @@ function App() {
   const [taskId, setTaskId] = useState(1);
   const [taskItem, setTaskItem] = useState({})
   const [reviewList, setReviewList] = useState([]);
+  const [filterName, setFilterName] = useState("");
+  const [searchOn, setSearchOn] = useState(false);
+
+  const filteredTasks = taskList.filter(task => task.name.toLowerCase().includes(filterName.toLowerCase()))
 
   const date = new Date();
   let day = date.getDate();
@@ -72,13 +76,22 @@ function App() {
     }
   }
 
+  function handleFilter(e) {
+    setFilterName(e.target.value)
+  }
+  
   return (
     <div>
       <NavBar />
+      {searchOn ? <div className="filter">
+        <h3 className="headline">Seek specific Tasks</h3>
+        <input className="filter-input" type="text" placeholder="Filter..." value={filterName} onChange={handleFilter}/>
+        </div> : null}
       <Switch>
         <Route exact path="/">
           <Home 
             todayPercent={todayPercent}
+            setSearchOn={setSearchOn}
             setTodayPercent={setTodayPercent} 
             reviewList={reviewList} 
             setReviewList={setReviewList}
@@ -88,19 +101,23 @@ function App() {
         </Route>
         <Route path="/points">
           <Points 
-            taskList={taskList} 
+            taskList={taskList}
+            setSearchOn={setSearchOn}
+            filteredTasks={filteredTasks} 
             todayPercent={todayPercent}
             changePercent={changePercent}
             barColor={barColor}
           />
         </Route>
         <Route path="/review">
-          <Review reviewList={reviewList} />
+          <Review reviewList={reviewList} setSearchOn={setSearchOn} />
         </Route>
         <Route exact path="/tasks">
           <Tasks 
             getItem={setTaskItem} 
-            getId={setTaskId} 
+            setSearchOn={setSearchOn}
+            getId={setTaskId}
+            filteredTasks={filteredTasks}
             taskList={taskList} 
             setTaskList={setTaskList}
           />
@@ -109,7 +126,7 @@ function App() {
           <TaskEditor 
             taskId={taskId} 
             taskItem={taskItem} 
-            taskList={taskList} 
+            filteredTasks={filteredTasks} 
             setTaskList={setTaskList}
             handleDelete={handleDelete}
           />

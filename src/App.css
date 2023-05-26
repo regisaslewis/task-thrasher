@@ -355,8 +355,9 @@ form > .buttons {
 
 .filter {
   width: 400px;
-  margin: 15px auto;
+  margin: -15px auto 15px auto;
   text-align: center;
+  display: flex;
 }
 
 .filter-input {

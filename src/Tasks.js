@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IndividualTask from "./IndivualTask";
 
 function Tasks({ 
-  taskList, 
+  filteredTasks,
+  setSearchOn,
+  taskList,
   setTaskList, 
   getId, 
   getItem,
@@ -12,9 +14,10 @@ function Tasks({
   const [newTaskImage, setNewTaskImage] = useState("");
   const [newTaskTime, setNewTaskTime] = useState("");
   const [newTaskPoints, setNewTaskPoints] = useState("");
-  const [filterName, setFilterName] = useState("")
 
-  const filteredTasks = taskList.filter(task => task.name.toLowerCase().includes(filterName.toLowerCase()))
+  useEffect(() => {
+    setSearchOn(true);
+  }, [setSearchOn])
 
   const editTaskList = filteredTasks.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
 
@@ -61,16 +64,8 @@ function Tasks({
     }
   }
 
-  function handleFilter(e) {
-    setFilterName(e.target.value)
-  }
-
   return (
     <div>
-    <div className="filter">
-      <h3 className="headline">LIMIT the EXCESS</h3>
-      <input className="filter-input" type="text" placeholder="Filter..." value={filterName} onChange={handleFilter}/>
-    </div>
       <h3 className="headline">CREATE the NEW</h3>
       <div>
         <form onSubmit={handleSubmit}>

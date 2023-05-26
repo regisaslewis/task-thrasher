@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Home({ 
   todayPercent,
   reviewList, 
+  setSearchOn,
   setReviewList, 
   todayDate,
   barColor
 }) {
 
   const [congratulate, setCongratulate] = useState(null);
+
+  useEffect(() => {
+    setSearchOn(false);
+  }, [setSearchOn])
 
   function handlePost() {
     if (!(reviewList[reviewList.length - 1].date === todayDate)) {
