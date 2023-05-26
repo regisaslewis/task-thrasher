@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import IndividualTask from "./IndivualTask";
 
 function Tasks({ 
-  filteredTasks,
-  setSearchOn,
   taskList,
   setTaskList, 
   getId, 
@@ -14,12 +12,8 @@ function Tasks({
   const [newTaskImage, setNewTaskImage] = useState("");
   const [newTaskTime, setNewTaskTime] = useState("");
   const [newTaskPoints, setNewTaskPoints] = useState("");
-
-  useEffect(() => {
-    setSearchOn(true);
-  }, [setSearchOn])
-
-  const editTaskList = filteredTasks.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
+  
+  const editTaskList = taskList.map(e => <IndividualTask getItem={getItem} getId={getId} key={e.id} item={e} />)
 
   function handleNameChange(e) {
     setNewTaskName(e.target.value)    

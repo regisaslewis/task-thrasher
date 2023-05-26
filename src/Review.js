@@ -1,12 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Day from "./Day";
 
-function Review({ reviewList, setSearchOn }) {
+function Review({ reviewList }) {
   const mostRecentFirst = [...reviewList].reverse();
-
-  useEffect(() => {
-    setSearchOn(false);
-  }, [setSearchOn])
   
   const days = mostRecentFirst.map(e => 
     <div className="day-layout">

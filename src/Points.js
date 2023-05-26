@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TaskButton from "./TaskButton";
 
-function Points({ filteredTasks, setSearchOn, todayPercent, changePercent, barColor }) {
+function Points({ taskList, todayPercent, changePercent, barColor }) {
 
-  useEffect(() => {
-    setSearchOn(true);
-  }, [setSearchOn]);
-
-  const tasks = filteredTasks.map(e => <TaskButton 
+  const tasks = taskList.map(e => <TaskButton 
     key={e.id} 
     item={e}
     changePercent={changePercent}
